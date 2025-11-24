@@ -6,12 +6,8 @@
 #include <unistd.h>
 #include <stddef.h>
 
-typedef struct formats
-{
-	char *type;
-	void (*find_function(va_list));
-} checker;
-
 int (*find_function(const char *format)(va_list));
+int _putchar(char c);
+int print_char(va_list args);
 
 #endif
