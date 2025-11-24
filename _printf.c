@@ -4,27 +4,6 @@
 /**
  * 
  */
-int (*find_function(const char *format))(va_list)
-{
-	unsigned int i = 0;
-	specifier_t handlers[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"%", print_percent},
-		{"d", print_decimal},
-		{"i", print_int},
-		{NULL, NULL}
-	};
-
-	while (handlers[i].type//rajout type) 
-		{
-			if (handlers[i].type) // manque aprés .
-				return (handlers[i].type[0] == (*format))
-			i++;
-		}
-		return (NULL);
-}
-
 int _printf(const char *format,...)
 {
 	va_list ap;
@@ -33,5 +12,14 @@ int _printf(const char *format,...)
 	if (format == NULL)
 		return (-1);
 	va_start(ap, format);
-	while ()
+
+	if(!format || (format[0] == '%' && !format[1]))
+	{
+		return(-1);
+	}
+	if(!format[0] == '%' && format[1] == ' ' && !format[2])
+	{
+		return(-1);
+	}
+	while (format[i])
 }
