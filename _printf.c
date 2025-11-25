@@ -29,7 +29,6 @@ int _printf(const char *format,...)
 			}
 			else if (format[i] == '\0')
 			{
-				_putchar(n);
 				va_end(args);
 				return (-1);
 			}
