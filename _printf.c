@@ -27,7 +27,7 @@ int _printf(const char *format,...)
 			{
 				count += func(args);
 			}
-			else if (format[i + 1] == '\0')
+			else if (format[i] == '\0')
 			{
 				_putchar(n);
 				va_end(args);
