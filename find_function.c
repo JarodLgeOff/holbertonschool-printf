@@ -15,8 +15,10 @@ int (*find_function(const char *format))(va_list)
 
 	while (handlers[i].type != NULL) 
 		{
-			if (handlers[i].type)
-				return (handlers[i].type[0] == (*format));
+			if (handlers[i].type[0] == (*format))
+				{
+					return (handlers[i].func);
+				}
 			i++;
 		}
 		return (NULL);

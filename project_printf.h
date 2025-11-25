@@ -1,5 +1,5 @@
-#ifndef PROJECT_PRINTF.H
-#define PROJECT_PRINTF.H
+#ifndef PROJECT_PRINTF_H
+#define PROJECT_PRINTF_H
 
 #include <stdarg.h>
 #include <stdio.h>
@@ -11,6 +11,7 @@
  * @type: format specifier
  * @func: function associated with the specifier
  */
+
 typedef struct specifier
 {
 	const char *type;
@@ -18,9 +19,9 @@ typedef struct specifier
 } specifier_t;
 
 
-int (*find_function(const char *format))(va_list);
 int _putchar(char c);
 int print_char(va_list args);
 int _printf(const char *format,...);
+int (*find_function(const char *format))(va_list);
 
 #endif
