@@ -7,19 +7,16 @@
 int (*find_function(const char *format))(va_list)
 {
 	unsigned int i = 0;
+
 	specifier_t handlers[] = {
 		{"c", print_char},
-		{"s", print_string},
-		{"%", print_percent},
-		{"d", print_decimal},
-		{"i", print_int},
 		{NULL, NULL}
 	};
 
-	while (handlers[i].type//rajout type) 
+	while (handlers[i].type != NULL) 
 		{
-			if (handlers[i].type) // manque aprés .
-				return (handlers[i].type[0] == (*format))
+			if (handlers[i].type)
+				return (handlers[i].type[0] == (*format));
 			i++;
 		}
 		return (NULL);
