@@ -1,9 +1,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include "project_printf.h"
-/**
- * 
- */
+
 int (*find_function(const char *format))(va_list)
 {
 	unsigned int i = 0;
@@ -11,6 +9,7 @@ int (*find_function(const char *format))(va_list)
 	specifier_t handlers[] = {
 		{"c", print_char},
 		{"s", print_string},
+		{"%", print_percent},
 		{NULL, NULL}
 	};
 
