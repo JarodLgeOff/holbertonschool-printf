@@ -28,5 +28,5 @@ int print_deci(va_list args)
 		num %= div;
 		div /= 10;
 	}
-	return (num);
+	return (count);
 }
