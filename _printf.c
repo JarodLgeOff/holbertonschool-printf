@@ -31,6 +31,7 @@ int _printf(const char *format,...)
 			{
 				_putchar(n);
 				_putchar(format[i]);
+				count += 2;
 			}
 		}
 		else
