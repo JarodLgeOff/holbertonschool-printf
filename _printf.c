@@ -16,7 +16,6 @@ int _printf(const char *format,...)
 		return (-1);
 	}
 	va_start(args, format);
-
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
@@ -27,11 +26,16 @@ int _printf(const char *format,...)
 			{
 				count += func(args);
 			}
-			else
+			else if (format[i] != '\0')
 			{
-				_putchar('%');
+				const char n = '%';
+				_putchar(n);
 				_putchar(format[i]);
-				count += 1;
+				count += 2;
+			}else
+			{
+				_putchar(format[i]);
+				count++;
 			}
 		}
 		else
@@ -41,7 +45,6 @@ int _printf(const char *format,...)
 		}
 		i++;
 	}
-
 	va_end(args);
 	return (count);
 }
