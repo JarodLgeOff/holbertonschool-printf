@@ -19,9 +19,10 @@ typedef struct specifier
 } specifier_t;
 
 int (*find_function(const char *format))(va_list);
+int _printf(const char *format,...);
 int _putchar(char c);
 int print_char(va_list args);
-int _printf(const char *format,...);
 int print_string(va_list s);
+int print_percent(va_list args);
 
 #endif
