@@ -10,17 +10,16 @@ int _printf(const char *format,...)
 	int (*func)(va_list);
 	int i = 0;
 	int count = 0;
+	const char n = '%';
 
 	if (format == NULL)
 	{	
 		return (-1);
 	}
-
 	va_start(args, format);
-
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%')
+		if (format[i] == n)
 		{
 			i++;
 			func = find_function(&format[i]);
@@ -30,7 +29,7 @@ int _printf(const char *format,...)
 			}
 			else
 			{
-				_putchar('%');
+				_putchar(n);
 				_putchar(format[i]);
 				count += 2;
 			}
@@ -42,7 +41,6 @@ int _printf(const char *format,...)
 		}
 		i++;
 	}
-
 	va_end(args);
 	return (count);
 }
