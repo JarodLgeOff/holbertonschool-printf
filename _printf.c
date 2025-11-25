@@ -6,51 +6,41 @@
  */
 int _printf(const char *format,...)
 {
-	va_list ap;
-	int (*type)(va_list);
-	unsigned int i = 0;
+	va_list args;
+	int (*func)(va_list);
+	int i = 0;
+	int count = 0;
+
 	if (format == NULL)
-	{	
 		return (-1);
-	}
-	va_start(ap, format);
 
-	if(!format || (format[0] == '%' && !format[1]))
-	{
-		return(-1);
-	}
+	va_start(args, format);
 
-	while (format[i])
+	while (format[i] != '\0')
 	{
-		if (format[i] != '%')
+		if (format[i] == '%')
+		{
+			i++;
+			func = find_function(&format[i]);
+			if (func != NULL)
+			{
+				count += func(args);
+			}
+			else
+			{
+				_putchar('%');
+				_putchar(format[i]);
+				count += 2;
+			}
+		}
+		else
 		{
 			_putchar(format[i]);
-			i++;
-			continue;
+			count++;
 		}
-
-		if (format[i + 1] == '\0')
-		{	
-			return (-1);
-		}
-		
-		if (format[i + 1] == '%')
-		{
-			_putchar('%');
-			i += 2; 
-			continue;
-		}
-
-		type = find_function(&format[i + 1]);
-		if (type != NULL)
-		{
-			type(ap);
-			i += 2; 
-		}
-		_putchar('%');
-		_putchar(format[i + 1]);
-		i += 2;
+		i++;
 	}
-	va_end(ap);
-	return (i);
+
+	va_end(args);
+	return (count);
 }
