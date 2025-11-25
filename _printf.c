@@ -10,6 +10,7 @@ int _printf(const char *format,...)
 	int (*func)(va_list);
 	int i = 0;
 	int count = 0;
+	const char n = '%';
 
 	if (format == NULL)
 	{	
@@ -18,7 +19,7 @@ int _printf(const char *format,...)
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%')
+		if (format[i] == n)
 		{
 			i++;
 			func = find_function(&format[i]);
@@ -26,16 +27,10 @@ int _printf(const char *format,...)
 			{
 				count += func(args);
 			}
-			else if (format[i] != '\0')
+			else
 			{
-				const char n = '%';
 				_putchar(n);
 				_putchar(format[i]);
-				count += 2;
-			}else
-			{
-				_putchar(format[i]);
-				count++;
 			}
 		}
 		else
