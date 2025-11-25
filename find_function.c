@@ -10,6 +10,7 @@ int (*find_function(const char *format))(va_list)
 
 	specifier_t handlers[] = {
 		{"c", print_char},
+		{"s", print_string},
 		{NULL, NULL}
 	};
 
