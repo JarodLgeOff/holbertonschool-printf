@@ -24,5 +24,6 @@ int _putchar(char c);
 int print_char(va_list args);
 int print_string(va_list s);
 int print_percent(va_list args);
+int print_deci(va_list args);
 
 #endif
