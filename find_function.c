@@ -13,6 +13,7 @@ int (*find_function(const char *format))(va_list)
 		{"d", print_deci},
 		{"s", print_string},
 		{"%%", print_percent},
+		{"i", print_deci},
 		{NULL, NULL}
 	};
 
