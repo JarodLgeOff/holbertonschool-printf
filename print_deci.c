@@ -18,6 +18,13 @@ int print_deci(va_list args)
 		count++;
 		num = -num;
 	}
+
+	if (num == 0)
+	{
+		_putchar('0');
+		return (count + 1);
+	}
+	
 	while ((num / div) >= 10) 
 		div *= 10;
 
