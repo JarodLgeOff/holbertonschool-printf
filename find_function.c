@@ -11,6 +11,7 @@ int (*find_function(const char *format))(va_list)
 	specifier_t handlers[] = {
 		{"c", print_char},
 		{"d", print_deci},
+		{"i", print_deci},
 		{"s", print_string},
 		{"%%", print_percent},
 		{"i", print_deci},
