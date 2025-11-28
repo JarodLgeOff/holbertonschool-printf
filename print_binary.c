@@ -10,7 +10,7 @@
 int print_binary(va_list args)
 {
 	unsigned int n = va_arg(args, unsigned int);
-	unsigned int bin = 1 << (sizeof(unsigned int) * 7);
+	unsigned int bin = 1 << (sizeof(unsigned int) * 8 - 1);
 	int count = 0;
 	int started = 0;
 
