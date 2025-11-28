@@ -39,6 +39,7 @@ Specifier | Description | Answer
  d | specifies signed decimal integer | -762534
  i | specifies integer of various bases | 39
  b | specifies a binary | 1100010
+ u | print an unsigned | 2147484671
 
  ## Functions we use
 
@@ -51,6 +52,7 @@ int print_string(va_list s);
 int print_percent(va_list args);
 int print_deci(va_list args);
 int print_binary(va_list args);
+int print_unsigned(va_list args);
 ```
 
 ## Compilation
