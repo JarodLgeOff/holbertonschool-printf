@@ -143,7 +143,7 @@ Unknown:[%r]
 * You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use:
 
 ## Flowchart
-<img width="1280" height="891" alt="image" src="https://github.com/user-attachments/assets/44c0a877-3ebd-43ae-a83f-a33082799e22" />
+<img width="6054" height="4213" alt="image" src="https://github.com/user-attachments/assets/6fefc29c-7efd-4d2f-939f-deba4224089f" />
 
 ## Man _prinf
 commande : man 3 _printf
