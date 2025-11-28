@@ -138,8 +138,8 @@ Unknown:[%r]
 * Our main files will include your main header file (main.h): #include main.h
 * You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use:
 
-## [Flowchart](https://postimg.cc/2bjbs7yk)
-
+## Flowchart
+<img width="1280" height="891" alt="image" src="https://github.com/user-attachments/assets/44c0a877-3ebd-43ae-a83f-a33082799e22" />
 
 
 ## Contributors
