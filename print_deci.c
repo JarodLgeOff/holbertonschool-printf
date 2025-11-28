@@ -8,15 +8,20 @@
 int print_deci(va_list args)
 {
 	int n = va_arg(args, int);
-	int num = n;
-	int div = 1;
+	unsigned int num;
+	unsigned int div = 1;
 	int count = 0;
 
-	if (num < 0)
+	if (n < 0)
 	{
 		_putchar('-');
 		count++;
-		num = -num;
+		num = -n;
+
+	} 
+	else 
+	{
+		num = n;
 	}
 	while ((num / div) >= 10) 
 		div *= 10;
