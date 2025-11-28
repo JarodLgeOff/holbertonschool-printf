@@ -21,13 +21,13 @@ In this exercise we replicate the printf fonction of the C langage end replace i
 
 ## Authorized funtions and macros
 
-* write (man 2 write)
-* malloc (man 3 malloc)
-* free (man 3 free)
-* va_start (man 3 va_start)
-* va_end (man 3 va_end)
-* va_copy (man 3 va_copy)
-* va_arg (man 3 va_arg)
+* ``write (man 2 write)``
+* ``malloc (man 3 malloc)``
+* ``free (man 3 free)``
+* ``va_start (man 3 va_start)``
+* ``va_end (man 3 va_end)``
+* ``va_copy (man 3 va_copy)``
+* ``va_arg (man 3 va_arg)``
 
 ## Specifier
 
@@ -38,6 +38,7 @@ Specifier | Description | Answer
  % | Print percent (%) Character | %
  d | specifies signed decimal integer | -762534
  i | specifies integer of various bases | 39
+ b | specifies a binary | 
 
  ## Functions we use
 
@@ -137,8 +138,8 @@ Unknown:[%r]
 * Our main files will include your main header file (main.h): #include main.h
 * You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use:
 
-## [Flowchart](https://postimg.cc/2bjbs7yk)
-
+## Flowchart
+<img width="1280" height="891" alt="image" src="https://github.com/user-attachments/assets/44c0a877-3ebd-43ae-a83f-a33082799e22" />
 
 
 ## Contributors
