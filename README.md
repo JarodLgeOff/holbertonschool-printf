@@ -143,6 +143,7 @@ Unknown:[%r]
 <img width="1280" height="891" alt="image" src="https://github.com/user-attachments/assets/44c0a877-3ebd-43ae-a83f-a33082799e22" />
 
 ## Man _prinf
+commande : man 3 _printf
 
 
 ## Contributors
