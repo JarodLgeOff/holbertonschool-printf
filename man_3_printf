@@ -34,6 +34,9 @@ The const char * argument is expected to be a pointer to an array of character t
 .B o, b
 The unsigned int argument is converted to unsigned octal notation(o) or binary notation(b).
 .TP
+.B u
+The unsigned int argument is converted to unsigned decimal notation.
+.TP
 .B r
 Prints a string in reverse
 .TP 
