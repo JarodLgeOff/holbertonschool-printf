@@ -14,7 +14,7 @@ int (*find_function(const char *format))(va_list)
 		{"i", print_deci},
 		{"s", print_string},
 		{"%%", print_percent},
-		{"i", print_deci},
+		{"u", print_unsigned},
 		{NULL, NULL}
 	};
 

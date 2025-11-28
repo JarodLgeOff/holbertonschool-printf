@@ -38,7 +38,8 @@ Specifier | Description | Answer
  % | Print percent (%) Character | %
  d | specifies signed decimal integer | -762534
  i | specifies integer of various bases | 39
- b | specifies a binary | 
+ b | specifies a binary | 1100010
+ u | print an unsigned | 2147484671
 
  ## Functions we use
 
@@ -50,6 +51,8 @@ int print_char(va_list args);
 int print_string(va_list s);
 int print_percent(va_list args);
 int print_deci(va_list args);
+int print_binary(va_list args);
+int print_unsigned(va_list args);
 ```
 
 ## Compilation
@@ -104,6 +107,7 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
+	_printf("%b\n", 98);
     return (0);
 }
 ```
@@ -140,6 +144,9 @@ Unknown:[%r]
 
 ## Flowchart
 <img width="1280" height="891" alt="image" src="https://github.com/user-attachments/assets/44c0a877-3ebd-43ae-a83f-a33082799e22" />
+
+## Man _prinf
+commande : man 3 _printf
 
 
 ## Contributors
