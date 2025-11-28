@@ -38,7 +38,7 @@ Specifier | Description | Answer
  % | Print percent (%) Character | %
  d | specifies signed decimal integer | -762534
  i | specifies integer of various bases | 39
- b | specifies a binary | 
+ b | specifies a binary | 1100010
 
  ## Functions we use
 
@@ -141,6 +141,8 @@ Unknown:[%r]
 
 ## Flowchart
 <img width="1280" height="891" alt="image" src="https://github.com/user-attachments/assets/44c0a877-3ebd-43ae-a83f-a33082799e22" />
+
+## Man _prinf
 
 
 ## Contributors
